@@ -1,0 +1,4 @@
+---
+# handlers file for local_role
+
+- import_tasks: fs.yml

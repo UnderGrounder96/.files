@@ -1,0 +1,35 @@
+---
+# brew file for local_role
+
+- name: Install packages
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - bash-completion
+    - git
+    - neovim
+    - nodejs
+    - deno
+    - minikube
+    - derailed/k9s/k9s
+    - watch
+    - ansible
+    - ripgrep
+    - trash
+    - wget
+    - fd
+
+- name: Enable homebrew repos
+  homebrew_tap:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - homebrew/cask-fonts
+
+- name: Install casks
+  shell: "brew install --cask {{ item }}"
+  loop:
+    - font-caskaydia-cove-nerd-font
+    - iTerm2
+    - httpie

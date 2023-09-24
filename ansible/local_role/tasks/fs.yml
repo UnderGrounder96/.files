@@ -1,0 +1,34 @@
+---
+# fs file for local_role
+
+- name: Create folders
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - ~/wksc/
+    - ~/projects/
+
+- name: Create .hard links
+  file:
+    src: "{{ ANSIBLE_ROLE_FILE }}/{{ item }}"
+    dest: "~/{{ item }}"
+    force: true
+    state: hard
+  loop:
+    - .ansible.cfg
+    - .bash_profile
+    - .bashrc
+    - .gitconfig
+    - .gitignore_global
+    - .vimrc
+    - .zprofile
+    - .zshrc
+    - .zshrc_aliases
+
+- name: Copy oh-my-zsh theme
+  file:
+    src: "{{ ANSIBLE_ROLE_FILE }}/oh-my-zsh/custom/themes/example.zsh-theme"
+    dest: ~/.oh-my-zsh/custom/themes/example.zsh-theme
+    force: true
+    state: hard

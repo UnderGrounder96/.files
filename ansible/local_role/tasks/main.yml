@@ -1,0 +1,11 @@
+---
+# tasks file for local_role
+
+- name: Ping servers
+  ping:
+
+- import_tasks: fs.yml
+
+- import_tasks: brew.yml
+
+- import_tasks: install.yml

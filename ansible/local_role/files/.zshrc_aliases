@@ -1,0 +1,41 @@
+# User specific aliases and functions
+alias diffs="sdiff -s" # sdiff -s <(cat -n ${1}) <(cat -n ${2})
+alias ggrep="grep -nir --exclude=*{.md,.txt,*lock*} --exclude-dir={.git,node_modules,*cache*,log}"
+
+# nvim
+alias vim="nvim"
+# git
+alias g="git"
+alias gc="g config"
+alias gcl="g config --list"
+alias gcg="g config --global"
+
+# docker
+alias d="docker"
+alias dsp="d system prune -af --volumes"
+
+alias dc="docker-compose"
+alias dcd="dc down"
+alias dcu="dc up -d --build"
+alias dcl="dc logs -tf"
+alias dcdu="dcd && dcu"
+alias dcul="dcu && dcl"
+alias dcdul="dcd && dcu && dcl"
+
+# vagrant
+alias vs="vagrant ssh"
+alias vsc="vagrant ssh -c"
+alias vd="vagrant destroy -f"
+alias vr="vagrant reload -f"
+alias vu="vagrant up"
+alias vh="vagrant halt -f"
+alias vhs="vh;vs"
+alias vrs="vr;vs"
+alias vus="vu;vs"
+alias vdus="vd;vu;vs"
+alias vdu="vd;vu"
+alias vscp='f(){ vagrant scp ":$1" .; unset -f f; }; f'
+
+# kubectl
+# alias k="kubectl"
+

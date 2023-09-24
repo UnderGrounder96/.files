@@ -1,0 +1,43 @@
+[user]
+	name = Lucio Afonso
+	email = lucioafonso@icloud.com
+[core]
+	eol = lf
+	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+[color]
+	ui = true
+[alias]
+	i = init
+	cl = clone
+	s = status
+	st = stash
+	stp = stash pop
+	a = add -A
+	cm = commit -m
+	cam = commit -am
+	ca = commit --amend --no-edit
+	caa = commit -a --amend --no-edit
+	ch = checkout
+	chb = checkout -b
+	b = branch
+	bd = branch -D
+	al = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	rh = reset --hard
+	rhom = reset --hard origin/master
+	f = fetch
+	fa = fetch --all
+	p = push
+	po = push origin
+	pu = push upstream
+	pfo = push -f origin
+	pfu = push -f upstream
+	pdo = push --delete origin
+	pl = pull
+	plo = pull origin
+	plu = pull upstream
+[push]
+	autoSetupRemote = true

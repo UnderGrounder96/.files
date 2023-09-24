@@ -1,0 +1,6 @@
+---
+# defaults file for local_role
+
+REPO_PATH: ~/.files
+ANSIBLE_ROLE_PATH: "{{ REPO_PATH }}/ansible/local_role"
+ANSIBLE_ROLE_FILE: "{{ ANSIBLE_ROLE_PATH }}/files"

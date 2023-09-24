@@ -1,0 +1,15 @@
+---
+# install file for local_role
+
+- name: Install nvChad
+  git:
+    repo: https://github.com/NvChad/NvChad
+    dest: ~/.config/nvim
+    depth: 1
+
+- name: Install nvim-configs
+  git:
+    repo: https://github.com/UnderGrounder96/nvim-configs.git
+    dest: ~/.config/nvim/lua/custom
+    version: main
+  notify: Create extra symlinks
