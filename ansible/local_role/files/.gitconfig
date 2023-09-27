@@ -41,3 +41,4 @@
 	plu = pull upstream
 [push]
 	autoSetupRemote = true
+	default = current
