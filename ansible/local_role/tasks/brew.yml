@@ -19,6 +19,7 @@
     - trash
     - wget
     - fd
+    - python-tk
 
 - name: Enable homebrew repos
   homebrew_tap:
@@ -33,3 +34,4 @@
     - font-caskaydia-cove-nerd-font
     - iTerm2
     - httpie
+    - firefox
