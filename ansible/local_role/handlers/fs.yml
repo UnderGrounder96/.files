@@ -10,4 +10,3 @@
     - { src: ~/.files, dest: ~/wksc/dotfiles }
     - { src: ~/.zshrc_aliases, dest: ~/.bash_aliases }
     - { src: ~/.config/nvim/lua/custom, dest: ~/wksc/nvim-configs }
-    - { src: /opt/homebrew/bin/python3, dest: /opt/homebrew/bin/py3 }

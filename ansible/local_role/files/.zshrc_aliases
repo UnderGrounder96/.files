@@ -1,6 +1,7 @@
 # User specific aliases and functions
 alias diffs="sdiff -s" # sdiff -s <(cat -n ${1}) <(cat -n ${2})
 alias ggrep="grep -nir --exclude=*{.md,.txt,*lock*} --exclude-dir={.git,node_modules,*cache*,log}"
+alias py3="python3"
 
 # nvim
 alias vim="nvim"
